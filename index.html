@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
    <link rel="stylesheet" href="style.css">
+
 
 </head>
 <body>
@@ -26,26 +31,24 @@
         <div class="my-details">
             <p>Hi,</p>
             <p>I'm <span class="name">Sarad Poudel</span></p>
-            <div class="auto-write">
-                <ul class="typewriter_wrapper">
-                    <li><span>Full stack Developer</span></li>
-                    <li><span>JavaScript Developer</span></li>
-                  
-                </ul>
-
-                </span>
-
-            </div>
-            
+        </div>
+            <div class="typewriter">
+            <p class="auto-type"><span></span></p>
+            </div> 
         </div>
      </main>
 
 
+     <div class="my-image-main">
+        <img src="./images/sarad-image-leaf.png" alt="my image in home page">
+     </div>
 
 
      <button class="nextpage-button">
         <i class="fa-solid fa-arrow-right"></i>
      </button>
+
+
      <footer>
         <div class="social-icon">
             <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -56,7 +59,36 @@
     </footer>
     </div>
 
- 
-    
+
+ <script>
+        // JavaScript for typing animation
+        const dynamicText = document.querySelector(".auto-type span");
+        const words = ["Full Stack Web Developer", "Javascript Developer", "Node.js Developer"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        const typeEffect = () => {
+            const currentWord = words[wordIndex];
+            const currentChar = currentWord.substring(0, charIndex);
+            dynamicText.textContent = currentChar;
+            dynamicText.classList.add("stop-blinking");
+
+            if (!isDeleting && charIndex < currentWord.length) {
+                charIndex++;
+                setTimeout(typeEffect, 200);
+            } else if (isDeleting && charIndex > 0) {
+                charIndex--;
+                setTimeout(typeEffect, 100);
+            } else {
+                isDeleting = !isDeleting;
+                dynamicText.classList.remove("stop-blinking");
+                wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
+                setTimeout(typeEffect, 1200);
+            }
+        }
+
+        typeEffect();
+    </script>
 </body>
 </html>
