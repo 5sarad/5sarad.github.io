@@ -4,6 +4,7 @@
     --primary-color : #e50914;
     --primary-hover-color: #00eeff;
     --font-color: #fff;
+    --about-text-color: #4b5563;
 }
 body{
     font-family: "Titillium Web", sans-serif;
@@ -12,21 +13,18 @@ body{
 }
 
 .home{
-  
     height: 100vh;
     background-size: cover;
     background-position: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0.6) 100%), url('./images/background-home.jpg');
-   position: relative;
+    position: relative;
 }
 
 nav{
     height: 6rem;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    
-    
+    align-items: center;  
 }
 nav a{
     text-decoration: none;
@@ -112,6 +110,8 @@ nav .right a{
 }
 
 
+
+
 @keyframes blink {
     50%{
         opacity: 0;
@@ -133,23 +133,32 @@ nav .right a{
     
 }
 
-.nextpage-button{
+.changepage-button{
     background: transparent;
     color: var(--font-color);
     height: 48px;
     width: 48px;
     border-radius: 9999px;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-right: 4rem;
     transition: width 0.5s ease;
     animation:circle-bounce 2s infinite;
     cursor: pointer;
     border: 2px solid var(--font-color);
 }
-.nextpage-button:hover{
+.nextpage-button{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 4rem;
+}
+.previouspage-button{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 4rem;
+}
+.changepage-button:hover{
     animation: none;
     border: 2px solid var(--primary-hover-color);
 
@@ -196,3 +205,152 @@ nav .right a{
     color: var(--primary-hover-color);
   }
 
+
+
+  /* About page */
+  .about nav a{
+    color: black;
+  }
+  .about nav a:hover{
+    color: var(--primary-hover-color);
+  }
+  .about{
+    position: relative;
+    background-color: aquamarine;
+   
+  
+  }
+  .about-content{
+    display: flex;
+     align-items: center;
+    flex-direction: column;
+  }
+ .about main{
+    width: 70%;
+    align-items: center;
+    background: white;
+ }
+ .about-head{
+    margin-bottom: 1rem;
+ }
+ .about-head h1{
+    color: var(--about-text-color);
+    font-size: 6rem;
+    line-height: 1;
+    font-weight: 800;
+    margin-bottom: 1rem;
+ }
+.about-my-disc p{
+    color: rgb(56, 61, 66);
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+
+ .about-content hr{
+    background-color: var(--about-text-color);
+    height: 5px;
+    margin: 1rem 0 2rem;
+ }
+ .technical-specs h2, .brief-history h2{
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--about-text-color);
+    font-weight: 700;
+ }
+ .technical-specs, .brief-history{
+    margin-bottom: 1rem;
+ }
+.technical-speces p, .brief-history p{
+    color: rgb(56, 61, 66);
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+ 
+
+/* Contact page */
+.contact{
+    background-color: #485867;
+    height: 100vh;
+}
+
+#contact-form{
+    display: flex;
+    flex-direction: column;
+}
+#contact-form input{
+    margin: 1rem 2rem;
+    line-height: 1rem;
+}
+.footer-contact{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.footer-contact div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+.row2{
+  width: 40%;
+    
+}
+.row3{
+    width: 75%;
+}
+
+
+
+  .footer-contact a{
+    font-size: 2.5rem;
+    color: var(--font-color);
+    box-sizing: border-box;
+  }
+
+ 
+  .footer-contact a:hover{
+    color: var(--primary-hover-color);
+  }
+  .refresh-to-home{
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid white;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 100;
+  }
+  .refresh-to-home:hover{
+    border-color: var(--primary-hover-color);
+  }
+  @keyframes rotateSlowly {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.refresh-to-home:hover .fa-arrows-rotate {
+    animation: rotateSlowly 1s linear infinite;
+}
+  .refresh-to-home i{
+    font-size: 2rem;
+    
+  }
+  .contact-content main{
+    width: 70%;
+    margin: 0 auto;
+  }
