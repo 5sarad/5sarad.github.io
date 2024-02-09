@@ -27,17 +27,19 @@
             <main>
                 <div class="contact-me">
                     <h2>Contact.</h2>
-                    <form id="contact-form" action="">
-                        <input type="text" name="" id="" placeholder="Name">
-                        <input type="email" name="" id="" placeholder="Email">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Enter your message..."></textarea>
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="8cac0ff1-7ee5-4dc3-a4d8-315747ac8bc9">
+                        <input type="text" name="name" id="" placeholder="Name" required>
+                        <input type="email" name="email" id="" placeholder="Email" required>
+                        <input type="tel" name="phone" id="" placeholder="Phone Number" required>
+                        <textarea name="message" id="" cols="30" rows="10" placeholder="Enter your message..."></textarea>
                         <button>Submit</button>
                     </form>
                 </div>
                 <div class="my-contact-details">
-    
+                   
                 </div>
-            </main>
+            </main> 
             <div class="footer-contact">
                 <div class="row1">
                     <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>

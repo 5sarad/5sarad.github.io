@@ -31,12 +31,8 @@ nav a{
     color: var(--font-color);
     font-size: 2rem;
 }
-nav a:hover{
-    color: var(--primary-hover-color);
-}
-.right a:active{
-    color: var(--primary-hover-color);
-}
+
+
 nav .left{
     flex: 70%;
     justify-content: center;
@@ -51,11 +47,17 @@ nav .right{
   
     
 }
+nav a:hover{
+    color: var(--primary-hover-color);
+}
 nav .left a{
     padding-left: 2rem;
 }
 nav .right a{
     padding-right: 2rem;
+}
+.right a:active{
+    color: var(--primary-hover-color);
 }
 
 .home-main{
@@ -208,27 +210,30 @@ nav .right a{
 
 
   /* About page */
-  .about nav a{
-    color: black;
-  }
-  .about nav a:hover{
-    color: var(--primary-hover-color);
-  }
+ 
   .about{
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0.6) 100%), url('./images/about-bg.webp');
     position: relative;
-    background-color: aquamarine;
    
   
   }
   .about-content{
     display: flex;
-     align-items: center;
+    align-items: center;
     flex-direction: column;
+    
   }
  .about main{
-    width: 70%;
+    width: 60%;
     align-items: center;
-    background: white;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    border-radius: 1rem;
  }
  .about-head{
     margin-bottom: 1rem;
@@ -271,17 +276,94 @@ nav .right a{
 
 /* Contact page */
 .contact{
-    background-color: #485867;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.8) 100%), url('./images/contact-bg.webp');
+    position: relative;
     height: 100vh;
+}
+
+
+.contact-content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+.contact-content main{
+  width: 70%;
+ 
+
+  display:flex;
+ justify-content: space-between;
+ gap: 10rem;
+}
+.contact-me{
+    flex: 15%;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+.contact-me h2{
+    text-align: center;
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 800;
+    color: var(--about-text-color);
+    margin-bottom: 1rem;
+}
+.my-contact-details{
+    flex: 15%;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    border-radius: 1rem;
 }
 
 #contact-form{
     display: flex;
     flex-direction: column;
+   
 }
-#contact-form input{
-    margin: 1rem 2rem;
-    line-height: 1rem;
+#contact-form input, #contact-form textarea{
+    margin: 0.2rem 2rem;
+    line-height: 2.5rem;
+    border: none;
+    outline: none;
+    background-color: var(--about-text-color);
+    color: var(--font-color);
+    padding-left: 1rem;
+}
+#contact-form textarea{
+    height: 5rem;
+}
+#contact-form input:focus, #contact-form textarea:focus{
+    border: 2px solid var(--primary-hover-color);
+}
+
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+    color: var(--font-color);
+    font-size: 1rem;
+    
+    
+}
+#contact-form button{
+    background: linear-gradient(270deg, #ff994f, #fa6d86);
+    line-height: 2rem;
+    width: 7rem;
+    align-self: flex-end;
+    margin-right: 2rem;
+    color: var(--font-color);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
 }
 .footer-contact{
    
@@ -350,7 +432,39 @@ nav .right a{
     font-size: 2rem;
     
   }
-  .contact-content main{
-    width: 70%;
-    margin: 0 auto;
+
+
+
+
+  /* Work page */
+  .work{
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.8) 100%), url('./images/work-bg.jpeg');
+    position: relative;
   }
+
+  .work-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .work-content main{
+    width: 60%;
+    height: 100vh;
+    align-items: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    border-radius: 1rem;
+  }
+  .work-content main h1{
+    color: var(--about-text-color);
+    font-size: 6rem;
+    line-height: 1;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
