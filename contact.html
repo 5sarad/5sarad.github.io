@@ -26,18 +26,28 @@
         <div class="contact-content">
             <main>
                 <div class="contact-me">
-                    <h2>Contact.</h2>
+                    <h2>Contact Me.</h2>
                     <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
                         <input type="hidden" name="access_key" value="8cac0ff1-7ee5-4dc3-a4d8-315747ac8bc9">
                         <input type="text" name="name" id="" placeholder="Name" required>
                         <input type="email" name="email" id="" placeholder="Email" required>
                         <input type="tel" name="phone" id="" placeholder="Phone Number" required>
-                        <textarea name="message" id="" cols="30" rows="10" placeholder="Enter your message..."></textarea>
+                        <textarea name="message" id="" placeholder="Enter your message..."></textarea>
                         <button>Submit</button>
                     </form>
                 </div>
                 <div class="my-contact-details">
-                   
+                    <h2>Get in touch</h2>
+                    <h3>Feel free to reach out using the following methods:</h3>
+                  
+                    <div>
+                        <a href="mailto:saradpoudel@outlook.com" class="contact-method">
+                            <i class="fas fa-envelope"></i> Email me: saradpoudel@outlook.com
+                          </a>
+                          <p class="phone-number">Phone: +61 0452203478</p>
+                    </div>
+                    <p class="reach-out">I'd love to hear from you! Reach out to discuss your project or just say hello.</p>
+                    <p class="thank-you">Thank You</p>
                 </div>
             </main> 
             <div class="footer-contact">
@@ -59,8 +69,20 @@
         </div>
 
          <button class="previouspage-button changepage-button">
-            <i class="fa-solid fa-arrow-left"><a href="about.html"></a></i>
+            <i class="fa-solid fa-arrow-left"></i>
          </button>
+         <div class="triangle"></div>
     </div>
+    <script>
+        // Get the button element
+        var previousPageButton = document.querySelector(".previouspage-button");
+
+        // Add a click event listener
+        previousPageButton.addEventListener("click", function() {
+            // Navigate to the previous page (replace "previous-page.html" with the actual URL of the previous page)
+            window.location.href = "work.html";
+        });
+    </script>
+      
 </body>
 </html>

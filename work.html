@@ -35,5 +35,17 @@
             <i class="fa-solid fa-arrow-left"><a href="about.html"></a></i>
          </button>
     </div>
+
+    <script>
+        var previousPageButton = document.querySelector(".previouspage-button");
+        previousPageButton.addEventListener("click", function() {
+            window.location.href = "about.html";
+        });
+
+        var nextPageButton = document.querySelector(".nextpage-button");
+        nextPageButton.addEventListener("click", function() {
+            window.location.href = "contact.html";
+        });
+    </script>
 </body>
 </html>

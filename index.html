@@ -41,6 +41,16 @@
         <img src="./images/sarad-image-leaf.png" alt="my image in home page">
      </div>
 
+     <div class="animation-container">
+        <div class="cube">
+          <a href="index.html" class="face front">Home</a>
+          <a href="about.html" class="face back">About</a>
+          <a href="work.html" class="face right-side">Work</a>
+          <a href="contact.html" class="face left-side">Contact</a>
+          <a href="#contact" class="face top-side"></a>
+          <a href="#resume" class="face bottom-side"></a>
+        </div>
+      </div>
 
      <button class="nextpage-button changepage-button">
         <i class="fa-solid fa-arrow-right"><a href="about.html"></a></i>
@@ -89,7 +99,10 @@
         typeEffect();
 
 
-
+        var nextPageButton = document.querySelector(".nextpage-button");
+        nextPageButton.addEventListener("click", function() {
+            window.location.href = "about.html";
+        });
      
 
     </script>

@@ -37,8 +37,19 @@
             <hr>
             <div class="technical-specs brief-history">
                     <h2>Technical Specs.</h2>
-                    <div></div>
+                    <div class="skills-icon">
+                        <ul>
+                            <li><i class="fa-brands fa-html5"></i>HTML</li>
+                            <li><i class="fa-brands fa-css3-alt"></i>CSS</li>
+                            <li><i class="fa-brands fa-react"></i>React</li>
+                            <li><i class="fa-brands fa-git-alt"></i>Git</li>
+                            <li><i class="fa-brands fa-js"></i>JavaScript</li>
+                            <li><i class="fa-brands fa-docker"></i>docker</li>
+                            <li><i class="fa-brands fa-node-js"></i>Node.js</li>
+                        </ul>
+                    </div>
                     <p>I've spent the last two years cutting my teeth in full-stack web development going through highly recommended online courses and building an array of personal projects some of which you'll see on the next page. I enjoy programming at either end of the tech stack whether it's creating data models and optimizing database queries, or animating SVG's and creating fluid digital experiences.</p>
+                    
                 </div>
                
                
@@ -55,5 +66,17 @@
             <i class="fa-solid fa-arrow-left"><a href="about.html"></a></i>
          </button>
     </div>
+
+    <script>
+        var previousPageButton = document.querySelector(".previouspage-button");
+        previousPageButton.addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        var nextPageButton = document.querySelector(".nextpage-button");
+        nextPageButton.addEventListener("click", function() {
+            window.location.href = "work.html";
+        });
+    </script>
 </body>
 </html>
