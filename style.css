@@ -198,8 +198,9 @@ nav .right a{
     height: 100vh;
     perspective: 800px;
     position: absolute;
-    top: 0;
-    left: 45%;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .cube {
@@ -257,7 +258,34 @@ nav .right a{
     }
   }
 
+  .hire-me-button {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    translate: -50%;
+    background-color: #381ead; /* Green */
+    border: none;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    animation: pulse 2s infinite;
+}
 
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+.hire-me-button:hover {
+  background-color: #45a049; 
+}
   footer .social-icon{
     display: flex;
     align-items: center;
