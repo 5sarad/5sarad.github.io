@@ -129,10 +129,16 @@ nav .right a{
 
 .my-image-main{
     position: absolute;
-    right: 15rem;
+    right: 10rem;
     top: 50%;
     transform: translateY(-50%);
     
+    
+}
+.my-image-main img{
+  display: block; 
+  max-width: 100%;
+  filter: drop-shadow(10px 5px 10px rgba(134, 190, 37, 0.8));
 }
 
 .changepage-button{
@@ -211,7 +217,7 @@ nav .right a{
     height: 100%;
     background-color: rgba(0, 123, 255, 0.8);
     border: 0.2rem solid #007bff;
-    line-height: 10rem; 
+    line-height: 8rem; 
     text-align: center;
     font-size: 1.5rem; 
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
