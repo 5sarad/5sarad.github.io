@@ -25,6 +25,7 @@ nav{
     display: flex;
     justify-content: space-evenly;
     align-items: center;  
+    
 }
 nav a{
     text-decoration: none;
@@ -284,15 +285,11 @@ nav .right a{
     background-size: cover;
     background-position: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0.6) 100%), url('./images/about-bg.webp');
-    position: relative;
-   
-  
   }
   .about-content{
     display: flex;
     align-items: center;
     flex-direction: column;
-    
   }
  .about main{
     width: 60%;
@@ -301,12 +298,17 @@ nav .right a{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 50px;
+    padding: 1rem 1.5rem;
     border-radius: 1rem;
  }
  .about-head{
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
  }
+
  .about-head h1{
     color: var(--about-text-color);
     font-size: 6rem;
@@ -314,6 +316,20 @@ nav .right a{
     font-weight: 800;
     margin-bottom: 1rem;
  }
+ .about-head img{
+  width: 10rem;
+  height: 10rem;
+  animation: 3s image-appear linear;
+ }
+ @keyframes image-appear {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+ }
+
 .about-my-disc p{
     color: rgb(56, 61, 66);
     font-size: 1.875rem;
@@ -326,7 +342,17 @@ nav .right a{
     background-color: var(--about-text-color);
     height: 5px;
     margin: 1rem 0 2rem;
+    animation: 3s moving-line linear;
  }
+  @keyframes moving-line {
+    0%{
+      width: 0;
+    }
+    100%{
+      width: 100%;
+    }
+  }
+
  .technical-specs h2, .brief-history h2{
     font-size: 3rem;
     line-height: 1;
@@ -511,17 +537,7 @@ nav .right a{
 outline: 2px solid red;
 background: #fa6d86;
 }
-.footer-contact{
-   
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 5;
-}
+
 .triangle{
 bottom: 0;
 left: 0;
@@ -531,9 +547,32 @@ position: absolute;
  height: 0;
  border: 50vw solid transparent;
  border-top: 0;
- border-bottom: 14rem solid #4b5563;
-
+ border-bottom: solid #4b5563;
+ border-bottom-width: 0;
+ animation: 3s triangle-appear  forwards;
 }
+
+@keyframes triangle-appear {
+  0% {
+      border-bottom-width: 0;
+  }
+  100% {
+      border-bottom-width: 14rem;
+  }
+}
+
+.footer-contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  animation: 3s image-appear linear;
+}
+
 
 .footer-contact div{
     display: flex;
