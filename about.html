@@ -12,15 +12,13 @@
    <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
-    <div class="about">
-        
+<body class="about">
             <nav>
             <div class="left">
                 <a href="index.html">Home</a>
             </div>
             <div class="right">
-                <a href="about.html">About</a>
+                <a href="about.html" class="active">About</a>
                 <a href="work.html">Work</a>
                 <a href="contact.html">Contact</a>
             </div>
@@ -38,7 +36,9 @@
             <hr>
             <div class="technical-specs brief-history">
                     <h2>Technical Specs.</h2>
+                 
                     <div class="skills-icon">
+                    <marquee behavior="scroll" direction="left" scrollamount="5" style="width: 100%;">
                         <ul>
                             <li><i class="fa-brands fa-html5"></i>HTML</li>
                             <li><i class="fa-brands fa-css3-alt"></i>CSS</li>
@@ -48,6 +48,7 @@
                             <li><i class="fa-brands fa-docker"></i>docker</li>
                             <li><i class="fa-brands fa-node-js"></i>Node.js</li>
                         </ul>
+                       </marquee>
                     </div>
                     <p>I've spent the last two years cutting my teeth in full-stack web development going through highly recommended online courses and building an array of personal projects some of which you'll see on the next page. I enjoy programming at either end of the tech stack whether it's creating data models and optimizing database queries, or animating SVG's and creating fluid digital experiences.</p>
                     
@@ -56,7 +57,7 @@
                
             <div class="brief-history">
                 <h2>A Brief History...</h2>
-                <p>I graduated from Kent Institutr with an bachelor's degree in Information technology and an acceptance letter to the University of Washington in hand and decided to drop it all and pursue music. I found myself not as motivated as I'd thought I would feel as time went on and one day decided to try my hand at programming. I started the journey taking Harvard's intro to computer science course and haven't looked back since. I'm still a guitar enthusiast and love to write and play music, but I've found my true passion and professional calling in programming.</p>
+                <p>I graduated from Kent Institute with an bachelor's degree in Information technology and an acceptance letter to the University of Washington in hand and decided to drop it all and pursue music. I found myself not as motivated as I'd thought I would feel as time went on and one day decided to try my hand at programming. I started the journey taking Harvard's intro to computer science course and haven't looked back since. I'm still a guitar enthusiast and love to write and play music, but I've found my true passion and professional calling in programming.</p>
             </div>
             </main>
         </div>
@@ -66,7 +67,6 @@
          <button class="previouspage-button changepage-button">
             <i class="fa-solid fa-arrow-left"><a href="about.html"></a></i>
          </button>
-    </div>
 
     <script>
         var previousPageButton = document.querySelector(".previouspage-button");

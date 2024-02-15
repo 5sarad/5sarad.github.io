@@ -23,15 +23,19 @@ body{
 nav{
     height: 6rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;  
     
+}
+.active{
+  color:#4affae;
 }
 nav a{
     text-decoration: none;
     color: var(--font-color);
     font-size: 2rem;
 }
+
 
 
 nav .left{
@@ -313,27 +317,32 @@ nav .right a{
     background-size: cover;
     background-position: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0.6) 100%), url('./images/about-bg.webp');
+    position: relative;
   }
   .about-content{
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: absolute;
+    top: 6rem;
   }
- .about main{
+ .about-content main{
     width: 60%;
     align-items: center;
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 1rem 1.5rem;
+    padding: 2rem 4rem;
     border-radius: 1rem;
+    margin-bottom: 2rem;
  }
  .about-head{
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+   
    
  }
 
@@ -383,9 +392,11 @@ nav .right a{
 
  .technical-specs h2, .brief-history h2{
     font-size: 3rem;
-    line-height: 1;
+    line-height: 1.5rem;
     color: var(--about-text-color);
     font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
  }
  .technical-specs, .brief-history{
     margin-bottom: 1rem;
@@ -394,6 +405,7 @@ nav .right a{
     color: rgb(56, 61, 66);
     font-size: 1.25rem;
     line-height: 1.75rem;
+    margin-bottom: 5rem;
 }
 .skills-icon{
     width: 50%;
@@ -408,6 +420,7 @@ nav .right a{
     gap: 2rem;
    
  }
+
  .skills-icon i{
     font-size: 3rem;
     padding-right: 0.2rem;
@@ -417,13 +430,18 @@ nav .right a{
 .skills-icon li{
     display: flex;
     font-size: 1rem;
-    align-items: center;
-    animation: 10s move linear infinite;
-    right: 0;
-    position: relative;
-   
-    
+    align-items: center;   
 }
+.skills-icon li::before{
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+
 @keyframes move {
     0% {
         left: 0;
@@ -459,6 +477,8 @@ nav .right a{
   display:flex;
  justify-content: space-between;
  gap: 10rem;
+ position: absolute;
+ top: 6rem;
 }
 .contact-me{
     flex: 15%;
@@ -675,10 +695,13 @@ position: absolute;
     display: flex;
     align-items: center;
     flex-direction: column;
+    height: 100vh;
+    position: relative;
+    top: 6rem;
+    
   }
   .work-content main{
     width: 60%;
-    height: 100vh;
     align-items: center;
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
     background-repeat: no-repeat;
@@ -686,8 +709,9 @@ position: absolute;
     background-position: center;
     padding: 50px;
     border-radius: 1rem;
+    margin-bottom: 2rem;
   }
-  .work-content main h1{
+  .work-head h1{
     color: var(--about-text-color);
     font-size: 6rem;
     line-height: 1;
