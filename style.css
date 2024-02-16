@@ -136,9 +136,7 @@ nav .right a{
     position: absolute;
     right: 10rem;
     top: 50%;
-    transform: translateY(-50%);
-    
-    
+    transform: translateY(-50%);  
 }
 .my-image-main img{
   display: block; 
@@ -267,7 +265,7 @@ nav .right a{
     bottom: 10%;
     left: 50%;
     translate: -50%;
-    background-color: #381ead; /* Green */
+    background-color: #381ead; 
     border: none;
     color: white;
     padding: 0.7rem 1.5rem;
@@ -468,11 +466,11 @@ nav .right a{
   display: flex;
   align-items: center;
   flex-direction: column;
+ 
   
 }
 .contact-content main{
   width: 70%;
- 
   margin-top: 1rem;
   display:flex;
  justify-content: space-between;
@@ -598,6 +596,7 @@ position: absolute;
  border-bottom: solid #4b5563;
  border-bottom-width: 0;
  animation: 3s triangle-appear  forwards;
+ z-index: -1;
 }
 
 @keyframes triangle-appear {
@@ -626,7 +625,7 @@ position: absolute;
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
     box-sizing: border-box;
 }
 .row2{
@@ -719,3 +718,282 @@ position: absolute;
     margin-bottom: 1rem;
   }
 
+@media screen and (max-width: 600px)  {
+  
+  nav{
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    
+}
+nav a{
+  text-decoration: none;
+  color: var(--font-color);
+  font-size: 1rem;
+}
+
+.animation-container {
+  display: none;
+}
+ .home main{
+  margin-left: 2.5rem;
+ }
+
+.my-details{
+
+  font-size: 1.5rem;
+  margin-top: 3rem;
+ 
+ 
+}
+
+.my-details .name{
+ 
+  font-size: 2rem;
+ 
+}
+.typewriter{
+  height: 1.5rem;
+  
+}
+
+.auto-type{
+  height: 1.5rem;
+ 
+  
+}
+
+.auto-type span{
+
+  font-size: 1.5rem;
+
+  
+}
+.my-image-main{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%);
+}
+.my-image-main img{
+  width: 8rem;
+}
+.changepage-button{
+  display: none;
+}
+
+.hire-me-button {
+
+  padding: 0.3rem 0.7rem;
+  font-size: 1rem;
+ margin-bottom: 3rem;
+}
+  footer .social-icon{
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+  right: 2rem;
+  justify-content: space-between;
+  }
+  footer a{
+    font-size: 1.5rem;
+  }
+  
+  .about-content{
+    top: 3rem;
+
+  }
+ .about-content main{
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    width: 70%;
+ }
+
+
+ .about-head h1{
+    font-size: 3rem;
+ 
+ }
+ .about-head img{
+  width: 5rem;
+  height: 5rem;
+ }
+
+
+.about-my-disc p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+ .about-content hr{
+    height: 2px;
+    margin: 1rem 0 2rem;
+ }
+
+ .technical-specs h2, .brief-history h2{
+    font-size: 1.5rem;
+    line-height: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+ }
+ .technical-specs, .brief-history{
+    margin-bottom: 1rem;
+ }
+.technical-speces p, .brief-history p{
+   
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+}
+  
+.skills-icon{
+  width: 100%;
+}
+ .skills-icon ul{
+ 
+    gap: 1rem;
+   
+ }
+
+ .work-content{
+  top: 0;
+ 
+  
+}
+.work-content main{
+  width: 60%;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+.work-head h1{
+  font-size: 2rem;
+  line-height: 1;
+}
+.contact{
+  height: 100%;
+  position: relative;
+}
+.contact-content main{
+  width: 80%;
+  margin-top: 1rem;
+  display:flex;
+  flex-direction: column;
+ justify-content: space-between;
+ gap: 2rem;
+ position: absolute;
+ top: 3rem;
+}
+.contact-me{
+    flex: 100%;
+    padding: 1rem 0rem;
+    border-radius: 1rem;
+   
+   
+}
+.contact-me h2, .my-contact-details h2{
+    font-size: 1.5rem;
+    line-height: 1;
+
+}
+.my-contact-details{
+    flex: 100%;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+   
+}
+.my-contact-details h3{
+    font-size: 1.5rem;
+
+}
+.my-contact-details div{
+    margin-top: 1rem;
+    text-align: center;
+}
+.contact-method{
+    font-size: 1.25rem;
+}
+.phone-number{
+    font-size: 1.25rem;
+
+}
+.reach-out{
+    font-size: 1.25rem;
+    padding-top: 1rem;
+
+}
+.thank-you{
+
+    font-size: 2rem;
+    margin-top: 1rem;
+
+}
+
+#contact-form input, #contact-form textarea{
+    margin: 0.2rem 2rem;
+    line-height: 2rem;
+
+    padding-left: 1rem;
+}
+#contact-form textarea{
+    height: 4rem;
+}
+
+
+
+
+@keyframes triangle-appear {
+  0% {
+      border-bottom-width: 0;
+  }
+  100% {
+      border-bottom-width: 14rem;
+  }
+}
+
+.footer-contact{
+
+  bottom: -200vh;
+
+}
+
+
+.footer-contact div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    box-sizing: border-box;
+}
+.row2{
+  width: 50%;
+    
+}
+
+
+
+
+  .footer-contact a{
+    font-size: 2rem;
+
+  }
+
+
+  .refresh-to-home{
+    width: 2rem;
+    height: 2rem;
+
+  }
+
+  .refresh-to-home i{
+    font-size: 1rem;
+    
+  }
+
+
+}
