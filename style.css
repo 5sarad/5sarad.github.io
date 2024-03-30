@@ -19,7 +19,9 @@ body{
     background-image: linear-gradient(rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0.6) 100%), url('./images/background-home.jpg');
     position: relative;
 }
-
+a{
+  cursor: pointer;
+}
 nav{
     height: 6rem;
     display: flex;
@@ -314,6 +316,7 @@ nav .right a{
   .about{
     background-size: cover;
     background-position: center;
+    height: 100dvh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0.6) 100%), url('./images/about-bg.webp');
     position: relative;
   }
@@ -369,7 +372,7 @@ nav .right a{
     color: rgb(56, 61, 66);
     font-size: 1.875rem;
     line-height: 2.25rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 
@@ -701,6 +704,10 @@ position: absolute;
   }
   .work-content main{
     width: 60%;
+<<<<<<< HEAD
+=======
+   
+>>>>>>> 14a49f4633ebfa911b37bff9537176bfa2367101
     align-items: center;
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
     background-repeat: no-repeat;
@@ -712,11 +719,67 @@ position: absolute;
   }
   .work-head h1{
     color: var(--about-text-color);
-    font-size: 6rem;
+    font-size: 5rem;
     line-height: 1;
     font-weight: 800;
     margin-bottom: 1rem;
   }
+  .work-content {
+    padding: 20px;
+}
+
+.project {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: var(--about-text-color);
+}
+
+.project h2 {
+  margin-top: 0;
+  font-size: 3rem;
+  transition: color 0.3s;
+  font-weight: bold;
+  color: rgb(86, 226, 182);
+}
+
+.project h2:hover {
+  color: #007bff;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.project p {
+  margin-top: 0;
+}
+.project p a {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #50c97a;
+}
+.github-link {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.github-link:hover {
+  background-color: #0056b3;
+}
 
 @media screen and (max-width: 600px)  {
   
