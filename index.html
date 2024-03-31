@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sarad Poudel</title>
-    <link rel="icon" type="image/png" href="./icons/fav-icon.png">
+    <link rel="icon" type="image/png" href="./assests/images/icons/fav-icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assests/css/style.css">
+    <script defer src="./assests/js/app.js"></script>
 </head>
 <body class="home">
         <nav>
@@ -17,9 +18,9 @@
                 <a href="index.html" class="active">Home</a>
             </div>
             <div class="right">
-                <a href="about.html">About</a>
-                <a href="work.html">Work</a>
-                <a href="contact.html">Contact</a>
+                <a href="./assests/about.html">About</a>
+                <a href="./assests/work.html">Work</a>
+                <a href="./assests/contact.html">Contact</a>
             </div>
         </nav>
 
@@ -36,75 +37,34 @@
 
 
      <div class="my-image-main">
-        <img src="./images/image-sarad.png" alt="my image in home page">
+        <img src="./assests/images/image-sarad.png" alt="my image in home page">
      </div>
 
      <div class="animation-container">
         <div class="cube">
           <a href="index.html" class="face front">Home</a>
-          <a href="about.html" class="face back">About</a>
-          <a href="work.html" class="face right-side">Work</a>
-          <a href="contact.html" class="face left-side">Contact</a>
-          <a href="#contact" class="face top-side"></a>
-          <a href="#resume" class="face bottom-side"></a>
+          <a href="./assests/about.html" class="face back">About</a>
+          <a href="./assests/work.html" class="face right-side">Work</a>
+          <a href="./assests/contact.html" class="face left-side">Contact</a>
         </div>
       </div>
-      <button class="hire-me-button">Hire Me</button>
-     <button class="nextpage-button changepage-button">
-        <i class="fa-solid fa-arrow-right"><a href="about.html"></a></i>
-     </button>
+      <a href="./assests/contact.html" class="hire-me-button">Hire Me</a>
+     <a href="./assests/about.html" class="nextpage-button changepage-button">
+        <i class="fa-solid fa-arrow-right"></i>
+        
+     </a>
 
 
      <footer>
         <div class="social-icon">
-            <a href="https://www.linkedin.com/in/saradpoudel/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://github.com/5sarad" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.facebook.com/5sarad" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/saradpoudel/" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/5sarad" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.facebook.com/5sarad" target="_blank" rel="noopener" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/thesaradpoudel" target="_blank" title="Twitter" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
     </footer>
 
 
- <script>
-        // JavaScript for typing animation
-        const dynamicText = document.querySelector(".auto-type span");
-        const words = ["Full Stack Web Developer", "Javascript Developer", "Node.js Developer"];
-        let wordIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
 
-        const typeEffect = () => {
-            const currentWord = words[wordIndex];
-            const currentChar = currentWord.substring(0, charIndex);
-            dynamicText.textContent = currentChar;
-            dynamicText.classList.add("stop-blinking");
-
-            if (!isDeleting && charIndex < currentWord.length) {
-                charIndex++;
-                setTimeout(typeEffect, 200);
-            } else if (isDeleting && charIndex > 0) {
-                charIndex--;
-                setTimeout(typeEffect, 100);
-            } else {
-                isDeleting = !isDeleting;
-                dynamicText.classList.remove("stop-blinking");
-                wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
-                setTimeout(typeEffect, 1200);
-            }
-        }
-
-        typeEffect();
-
-
-        var nextPageButton = document.querySelector(".nextpage-button");
-        nextPageButton.addEventListener("click", function() {
-            window.location.href = "about.html";
-        });
-     
-        var hireMeButton = document.querySelector(".hire-me-button");
-        hireMeButton.addEventListener("click", function() {
-            window.location.href = "contact.html";
-        });
-    </script>
 </body>
 </html>

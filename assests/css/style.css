@@ -16,11 +16,12 @@ body{
     height: 100vh;
     background-size: cover;
     background-position: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0.6) 100%), url('./images/background-home.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0.6) 100%), url('../images/background-home.jpg');
     position: relative;
 }
 a{
   cursor: pointer;
+  text-decoration: none;
 }
 nav{
     height: 6rem;
@@ -156,6 +157,9 @@ nav .right a{
     animation:circle-bounce 2s infinite;
     cursor: pointer;
     border: 2px solid var(--font-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .nextpage-button{
     position: fixed;
@@ -317,7 +321,7 @@ nav .right a{
     background-size: cover;
     background-position: center;
     height: 100dvh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0.6) 100%), url('./images/about-bg.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0.6) 100%), url('../images/about-bg.webp');
     position: relative;
   }
   .about-content{
@@ -409,7 +413,7 @@ nav .right a{
     margin-bottom: 5rem;
 }
 .skills-icon{
-    width: 50%;
+ 
     overflow: hidden;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -443,23 +447,29 @@ nav .right a{
 }
 
 
-@keyframes move {
-    0% {
-        left: 0;
-      }
-      50% {
-        left: -100%;
-      }
-      100% {
-        left: 0;
-      }
+
+
+.marquee {
+
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  animation: marquee 6s linear infinite;
 }
 
+@keyframes marquee {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
 /* Contact page */
 .contact{
     background-size: cover;
     background-position: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.8) 100%), url('./images/contact-bg.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.8) 100%), url('../images/contact-bg.webp');
     position: relative;
     height: 100vh;
 }
@@ -689,7 +699,7 @@ position: absolute;
   .work{
     background-size: cover;
     background-position: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.8) 100%), url('./images/work-bg.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.8) 100%), url('../images/work-bg.jpeg');
     position: relative;
   }
 
@@ -862,6 +872,7 @@ nav a{
   
   .about-content{
     top: 3rem;
+    width: 100%;
 
   }
  .about-content main{
@@ -910,20 +921,25 @@ nav a{
     margin-bottom: 2rem;
 }
   
-.skills-icon{
-  width: 100%;
-}
- .skills-icon ul{
- 
-    gap: 1rem;
-   
- }
 
- .work-content{
-  top: 0;
- 
-  
+.marquee {
+
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    animation: marquee 10s linear infinite;
 }
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
 .work-content main{
   width: 60%;
   border-radius: 1rem;
