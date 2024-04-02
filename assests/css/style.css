@@ -708,7 +708,7 @@ position: absolute;
     align-items: center;
     flex-direction: column;
     position: relative;
-    top: 6rem;
+  
    
   }
   .work-content main{
@@ -719,8 +719,9 @@ position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 50px;
+    padding: 0 50px;
     border-radius: 1rem;
+    margin-bottom: 2rem;
   }
   .work-content h1{
     color: var(--about-text-color);
